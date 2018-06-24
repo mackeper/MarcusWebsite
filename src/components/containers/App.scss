@@ -1,0 +1,62 @@
+@import "../../global";
+
+* {
+  margin: 0px;
+  padding: 0px; 
+  font-family: $main-font;
+  color: $main-font-color;
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+a { 
+  color: $main-font-color;
+  text-decoration: None;
+}
+a:hover { 
+  color: $main-font-color;
+  text-decoration: None;
+ }
+
+html, 
+body,
+#root {
+    height: 100%;
+    background: $background-color;
+}
+
+.App, .pagecontainer {
+  height:100%;
+  width:100%;
+}
+
+.pagecontainer {
+    width: 100%;
+    margin: auto;
+}
+
+// laptops
+@media only screen and (max-width: 1600px) {
+  .pagecontainer {
+    width: 100%;
+  }
+}
+
+// Tablets
+@media only screen and (max-width: 1024px) {
+  .pagecontainer {
+    width: 100%;
+  }
+}
+
+// Smartphone
+@media only screen and (max-width: 667px) {
+  .pagecontainer {
+    width: 100%;
+    
+  }
+}
