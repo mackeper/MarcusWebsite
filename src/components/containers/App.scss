@@ -17,6 +17,7 @@ a {
   color: $main-font-color;
   text-decoration: None;
 }
+
 a:hover { 
   color: $main-font-color;
   text-decoration: None;
@@ -25,38 +26,24 @@ a:hover {
 html, 
 body,
 #root {
-    height: 100%;
-    background: $background-color;
+    height:100vh;
+    width:100vw;
+    background: $site-bg;
 }
 
-.App, .pagecontainer {
+.App {
+  position: absolute;
+  top:10px;
+  right:10px;
+  bottom:10px;
+  left:10px;
+}
+
+.maincontainer {
   height:100%;
   width:100%;
-}
-
-.pagecontainer {
-    width: 100%;
-    margin: auto;
-}
-
-// laptops
-@media only screen and (max-width: 1600px) {
-  .pagecontainer {
-    width: 100%;
-  }
-}
-
-// Tablets
-@media only screen and (max-width: 1024px) {
-  .pagecontainer {
-    width: 100%;
-  }
-}
-
-// Smartphone
-@media only screen and (max-width: 667px) {
-  .pagecontainer {
-    width: 100%;
-    
-  }
+  background: $description-bg;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% 90%;
 }

@@ -1,42 +1,59 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Page from '../pages/page';
-
 import Header from '../header/header';
-
-//Redux
-import store from '../store';
+import Description from './description';
+import Demo from './demo';
 
 import './App.scss';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    //this.state = { loggedin: store.getState().auth.loggedin };
+    this.state = {
+      currentPage: 0,
+    };
   }
 
-
-  /**
-   *  Listen to wheather the user is logged in or not.
-   */
-  componentDidMount() {
-    this.unsubscribe = store.subscribe(() => {
-      this.setState({
-        //loggedin: store.getState().auth.loggedin
-      })
-    });
+  genDesc = (description) => {
+    return (
+      <Description
+        heading={description.heading}
+        preable={description.preable}
+        body={description.body}
+      />
+    );
   }
-  componentWillUnmount() {
-    this.unsubscribe();
+  genDemo = (description) => {
+    return (
+      <Demo
+        demo={description.demo}
+      />
+    );
   }
 
   render() {
+    const descriptions = [
+      {
+        heading:"Marcus Östling",
+        preamble:"My personal website",
+        body:"This is my website where I show want I've done!",
+        demo:"../../images/demo1.jpg",
+      },
+      {
+        heading:"Nejbor",
+        preamble:"Co-founder to the startup",
+        body:"I'm the co-founder and currently working for the startup Nejbor.",
+        demo:"../../images/demo1.jpg",
+      },
+    ];
+
     return (
       <div className="App">
-        <div className="pagecontainer">
-          <Header />
-          <Page />
+        <div className="maincontainer">
+        <Header />
+        {this.genDesc(descriptions[0])}
+        {this.genDemo(descriptions[0])}
         </div>
       </div>
     );
