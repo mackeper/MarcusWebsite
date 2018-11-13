@@ -42,7 +42,7 @@ class App extends Component {
       },
       {
         heading:"Nejbor",
-        preamble:"Co-founder to the startup",
+        preamble:"Co-founder of the startup",
         body:"I'm the co-founder and currently working for the startup Nejbor.",
         demo:"../../images/demo1.jpg",
       },

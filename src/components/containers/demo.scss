@@ -10,5 +10,6 @@
   justify-content: center;
   img {
     width:80%;
+    @include border-radius(15px);
   }
 }
