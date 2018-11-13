@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <Description
         heading={description.heading}
-        preable={description.preable}
+        preamble={description.preamble}
         body={description.body}
       />
     );
@@ -52,8 +52,8 @@ class App extends Component {
       <div className="App">
         <div className="maincontainer">
         <Header />
-        {this.genDesc(descriptions[0])}
-        {this.genDemo(descriptions[0])}
+        {this.genDesc(descriptions[this.state.currentPage])}
+        {this.genDemo(descriptions[this.state.currentPage])}
         </div>
       </div>
     );

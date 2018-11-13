@@ -7,9 +7,13 @@ import './description.scss';
 const Description = props => {
         return (
             <div className="Description">
+              <div>
                 <h1>{props.heading}</h1>
+                <div className="Descriptionhline"></div>
                 <h2>{props.preamble}</h2>
+                <div className="Descriptionhline"></div>
                 <p>{props.body}</p>
+              </div>
             </div>    
           );
 }
