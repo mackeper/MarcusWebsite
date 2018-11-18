@@ -6,14 +6,13 @@ import Navbar from './navbar';
 
 import './header.scss';
 
-class Header extends Component {
-    render() {
+const Header = props => {
         return (
             <div className="Header">
-               <Title/> <Navbar/>
+               <Title/>
+               <Navbar/>
             </div>
         );
-    }
 }
 
 export default Header;

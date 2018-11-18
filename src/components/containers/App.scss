@@ -33,10 +33,10 @@ body,
 
 .App {
   position: absolute;
-  top:10px;
-  right:10px;
-  bottom:10px;
-  left:10px;
+  top:30px;
+  right:30px;
+  bottom:30px;
+  left:30px;
 }
 
 .maincontainer {
@@ -46,4 +46,8 @@ body,
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 10% 90%;
+}
+
+.Active {
+    border: 1px solid black;
 }

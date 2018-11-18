@@ -1,5 +1,16 @@
 @import '../../global';
 
 .Navbar {
-    display: inline;
+    display: block;
+    margin-top: 10px;
+    .Navbaritem {
+        color:$lighter-font-color;
+        display: inline;
+        margin:10px;
+        padding:10px;
+        cursor: pointer;
+    }
+    .Navbaritem:hover {
+        color: $main-font-color;
+    }
 }

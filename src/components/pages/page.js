@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-//import { login } from '../../actions/authactions';
+import { example } from '../../actions/authactions';
 
 import './page.scss';
 
@@ -29,4 +29,4 @@ Page.propTypes = {
 
 };
 
-export default connect(null, { })(Page);
+export default connect(null, { example })(Page);

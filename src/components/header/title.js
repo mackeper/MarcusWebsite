@@ -6,7 +6,6 @@ import './title.scss';
 const Title = props => {
         return (
             <div className="Title">
-                Title
             </div>
         );
 }

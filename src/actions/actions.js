@@ -1,7 +1,6 @@
 import { TYPE } from './types';
 
-
-export const logout = () => dispatch => {
+export const example = () => dispatch => {
     dispatch({
         type: TYPE,
         payload: {
